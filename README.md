@@ -40,3 +40,47 @@
 
    The application will be available at `http://localhost:8080`.
 
+---
+
+Here's the format for querying the API in your Spring Boot project:
+
+### API Query Format
+
+**Endpoint:** `/api/supplier/query`
+
+**Method:** `POST`
+
+**Parameters:**
+
+- `location`: The city where the supplier is located.
+- `natureOfBusiness`: The nature of the business (e.g., `small_scale`, `medium_scale`, `large_scale`).
+- `manufacturingProcess`: The manufacturing process capabilities (e.g., `moulding`, `3d_printing`, `casting`, `coating`).
+- `page`: The page number for pagination (default is 1).
+- `size`: The number of results per page (default is 10).
+
+**Example Request:**
+
+```sh
+curl -X POST "http://localhost:8080/api/supplier/query" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "location": "Mumbai",
+           "natureOfBusiness": "small_scale",
+           "manufacturingProcess": "moulding",
+           "page": 1,
+           "size": 10
+         }'
+```
+
+**Request Body Format:**
+
+```json
+{
+  "location": "string",
+  "natureOfBusiness": "string",
+  "manufacturingProcess": "string",
+  "page": "integer",
+  "size": "integer"
+}
+```
+
