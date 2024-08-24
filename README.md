@@ -1,4 +1,4 @@
----
+
 
 # Search Demo Project
 
@@ -7,7 +7,7 @@
 1. **Clone the Repository:**
 
    ```sh
-   git clone https://github.com/yourusername/search_demo.git
+   git clone https://github.com/xcalibur-22/search_demo
    cd search_demo
    ```
 
@@ -39,6 +39,4 @@
    ```
 
    The application will be available at `http://localhost:8080`.
-
----
 
